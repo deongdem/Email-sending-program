@@ -1,0 +1,24 @@
+#this program is developed and designed dy tele coder(deongdem)
+#here we go!!!
+#no need to install smtplib
+import smtplib
+print ("hello user !! i am email sender i can send emails")
+while True:
+	user = "your email"
+	re_email = input("to whom i should send email enter here!!:")
+	password = "your password"
+	message = input("what should i say!!:")
+
+	server = smtplib.SMTP('smtp.gmail.com', 587)
+	server.starttls()
+	server.login(user,password)
+	print('login success')
+	server.sendmail(user,re_email,message)
+	print("sending email")
+	print("email sent")
+	p_quit = input("do you want to quit:")
+	if p_quit == "yes":
+		quit()
+  print("by tele coder(deongdem)") 
+# pip install pyinstaller and then type this in 
+# pyinstaller email.py or pyinstaller --onefile email.py to make it exe file
